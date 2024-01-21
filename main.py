@@ -14,9 +14,14 @@ with st.sidebar:
 
 
 if youtube_url and query:
-    db = lch.create_vector_db_from_youtbe_url(youtube_url)
-    response = lch.get_response_from_query(db , query)
-    st.subheader("Answer:")
-    st.text(textwrap.fill(response , width=80))
-    
-    
+    try:
+        wait=st.text("Processing Please Wait...")
+        db = lch.create_vector_db_from_youtbe_url(youtube_url)
+        response = lch.get_response_from_query(db , query)
+        wait.empty()
+        st.subheader("Answer:")
+        st.text(textwrap.fill(response , width=80))
+        
+    except Exception as e:
+        print(e)
+        st.text("Something went wrong")
