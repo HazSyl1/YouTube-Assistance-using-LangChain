@@ -10,7 +10,8 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 # from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import  load_dotenv
 
-load_dotenv()
+load_dotenv(dotenv_path=".env", verbose=True, override=True)
+
 output_parser = StrOutputParser()
 
 embeddings = OpenAIEmbeddings()
@@ -54,10 +55,10 @@ def get_response_from_query(db,query,k=4):
     response=response.replace("\n","")
     return response
 
-video_url="https://www.youtube.com/watch?v=lG7Uxts9SXs"
+# video_url="https://www.youtube.com/watch?v=lG7Uxts9SXs"
 
-print(get_response_from_query(db=create_vector_db_from_youtbe_url(video_url),query='What is the video about?')
-      )
+# print(get_response_from_query(db=create_vector_db_from_youtbe_url(video_url),query='What is the video about?')
+#       )
 
     
     
