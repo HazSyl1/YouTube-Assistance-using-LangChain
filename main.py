@@ -60,7 +60,8 @@ if youtube_url and query and submit_button:
         st.text(textwrap.fill(response , width=80))
         
     except Exception as e:
-        print(e)
+
         wait.empty()
         st.text("Something went wrong")
+        st.warning(e)
         
