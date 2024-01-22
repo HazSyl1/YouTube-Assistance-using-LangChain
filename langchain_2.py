@@ -9,8 +9,9 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 # from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import  load_dotenv
+from pathlib import Path
 
-load_dotenv(dotenv_path=".env", verbose=True, override=True)
+load_dotenv(dotenv_path=Path(".env"), verbose=True, override=True)
 
 output_parser = StrOutputParser()
 
