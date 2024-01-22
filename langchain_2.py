@@ -11,7 +11,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import  load_dotenv
 from pathlib import Path
 
-load_dotenv(dotenv_path=Path(".env"), verbose=True, override=True)
+load_dotenv(dotenv_path=Path("/etc/secrets/.env"), verbose=True, override=True)
 
 output_parser = StrOutputParser()
 
