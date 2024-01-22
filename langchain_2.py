@@ -10,7 +10,7 @@ from langchain.text_splitter import RecursiveCharacterTextSplitter
 # from langchain.text_splitter import RecursiveCharacterTextSplitter
 from dotenv import  load_dotenv
 
-load_dotenv(dotenv_path="/etc/secrets/.env", verbose=True, override=True)
+load_dotenv(dotenv_path=".env", verbose=True, override=True)
 
 output_parser = StrOutputParser()
 

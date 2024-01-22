@@ -61,4 +61,6 @@ if youtube_url and query and submit_button:
         
     except Exception as e:
         print(e)
+        wait.empty()
         st.text("Something went wrong")
+        
