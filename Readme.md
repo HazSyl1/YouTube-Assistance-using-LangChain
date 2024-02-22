@@ -1,4 +1,4 @@
-# YouTubr Assist
+# YouTube Assist
 *This webapp can be used to ask questions about any YouTube Video , given it's link.
 
 ### Technology used here are:
